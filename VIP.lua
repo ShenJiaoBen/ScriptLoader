@@ -14,6 +14,10 @@ elseif game.PlaceId == 16732694052 then  -- fish
 LnScript = "By LN" Roblox= "Fish"
 LnTeam= "免费"
 
+elseif game.PlaceId == 3623096087 then  -- 力量传奇
+KingScript = "By LN" Roblox= "霖溺Script"
+KingTeam= "LegendofPower" 
+
 end
 
 
