@@ -7,7 +7,7 @@ local GameIDs = {
     Planks = {140636953470579}, -- [TRADING]Planks 
     KillerAndSheriff = {12355337193}, -- 杀手与警长 
     BattlefieldTycoon = {31490825}, -- 战地大亨 
-    ColonialSurvival = {14888386963, 5129563181, 14972061219},-- 殖民地生存
+    ColonialSurvival = {14888386963, 14972061219},-- 殖民地生存
     NinjaLegend = {3956818381}, -- 忍者传奇
     SpeedLegend = {3101667897}, --极速传奇
     AttackingZombies = {1240123653}, -- 进击的僵尸 
@@ -15,11 +15,11 @@ local GameIDs = {
     FishTraining = {116432016116625}, -- 鱼的训练 
     Forsaken = {18687417158}, --  被遗弃 
     AllTheWayWest = {2474168535}, -- 一路向西 
-    BattleWarrior = {4282985734, 1390601379, 11979319180}, -- 战斗勇士 
+    BattleWarrior = {4282985734, 11979319180}, -- 战斗勇士 
     GunFFA = {12137249458}, -- 枪战FFA
     UltimateMiningTycoon = {18680867089}, -- 终极采矿大亨 
     PlantingGarden = {126884695634066} -- 种植花园
-     BladeBall = {13772394625, 4777817887, 15234596844, 15517169103, 16581637217, 15144787112}, -- 刀刃球
+     BladeBall = {13772394625, 15234596844, 15517169103, 16581637217, 15144787112}, -- 刀刃球
      hideOrdie = {18799085098}, -- 隐藏或死亡
      Bladeandbuffoonery = {117701570624742} -- 刀片和buffoonery
 }
@@ -195,6 +195,47 @@ end
 
 if isGame(GameIDs.HaikyuuLegends) then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Haikyuu%20Legends%20.lua"))()
+end
+
+if isGame(GameIDs.FishTraining) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/%E9%B1%BC%E7%9A%84%E8%AE%AD%E7%BB%83.lua"))()
+end
+
+if isGame(GameIDs.Forsaken) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Forsaken.lua"))()
+end
+
+if isGame(GameIDs.AllTheWayWest) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Allthewaywest.lua"))()
+end
+
+if isGame(GameIDs.BattleWarrior) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-BattleWarrior.lua"))()
+end
+
+if isGame(GameIDs.GunFFA) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-GunFFA.lua"))()
+end
+
+if isGame(GameIDs.UltimateMiningTycoon) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/%E9%9C%96%E6%BA%BA-%E7%BB%88%E6%9E%81%E9%87%87%E7%9F%BF%E5%A4%A7%E4%BA%A8.lua"))()
+end
+
+if isGame(GameIDs.PlantingGarden) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/%E7%A7%8D%E6%A4%8D%E8%8A%B1%E5%9B%AD.lua"))()
+end
+
+if isGame(GameIDs.BladeBall) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-BladeBall.lua"))()
+end
+
+if isGame(GameIDs.hideOrdie) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-Hide%20and%20die.lua"))()
+end
+
+if isGame(GameIDs.Bladeandbuffoonery) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-%E5%88%80%E7%89%87%E5%92%8Cbuffoonery.lua"))()
+end
 end
 
 if isGame(GameIDs.FishTraining) then
