@@ -33,93 +33,81 @@ local function isGame(gameList)
     return false
 end
 
-local scriptVars = {
-    KingScript = nil,
-    Roblox = nil,
-    KingTeam = nil,
-    LnScript = nil,
-    LnTeam = nil,
-    ServerName = nil,
-    LNScript = nil,
-    LNTeam = nil,
-    LinniScript = nil,
-    linniScript = nil,
-    LinniTeam = nil
-}
+
 
 if isGame(GameIDs.Ohio) then
-    scriptVars.KingScript = "By King"
-    scriptVars.Roblox = "草拟吗"
-    scriptVars.KingTeam = "King无敌"
+    KingScript = "By King"
+    Roblox = "草拟吗"
+    KingTeam = "King无敌"
 elseif isGame(GameIDs.Fish) then
-    scriptVars.LnScript = "By LN"
-    scriptVars.Roblox = "Fish"
-    scriptVars.LnTeam = "免费"
+    LnScript = "By LN"
+    Roblox = "Fish"
+    LnTeam = "免费"
 elseif isGame(GameIDs.LegendOfPower) then
-    scriptVars.KingScript = "By LN"
-    scriptVars.Roblox = "霖溺Script"
-    scriptVars.KingTeam = "LegendofPower"
+    KingScript = "By LN"
+    Roblox = "霖溺Script"
+    KingTeam = "LegendofPower"
 elseif isGame(GameIDs.Planks) then
-    scriptVars.KingScript = "By King"
-    scriptVars.Roblox = "霖溺Script"
-    scriptVars.KingTeam = "霖溺Planks"
+    KingScript = "By King"
+    Roblox = "霖溺Script"
+    KingTeam = "霖溺Planks"
 elseif isGame(GameIDs.KillerAndSheriff) then
-    scriptVars.KingScript = "By King"
-    scriptVars.Roblox = "新飞月二飞春"
-    scriptVars.KingTeam = "霖溺杀手与警长"
+    KingScript = "By King"
+    Roblox = "新飞月二飞春"
+    KingTeam = "霖溺杀手与警长"
 elseif isGame(GameIDs.BattlefieldTycoon) then
-    scriptVars.KingScript = "By King"
-    scriptVars.Roblox = "霖溺"
-    scriptVars.KingTeam = "战地大亨"
+    KingScript = "By King"
+    Roblox = "霖溺"
+    KingTeam = "战地大亨"
 elseif isGame(GameIDs.ColonialSurvival) then
-    scriptVars.LnScript = "By Ln"
-    scriptVars.LnTeam = "免费"
-    scriptVars.ServerName = "殖民地生存"
+    LnScript = "By Ln"
+    LnTeam = "免费"
+    ServerName = "殖民地生存"
 elseif isGame(GameIDs.NinjaLegend) then
-    scriptVars.KingScript = "By LN"
-    scriptVars.Roblox = "霖溺Script"
-    scriptVars.KingTeam = "LegendofNinja"
+    KingScript = "By LN"
+    Roblox = "霖溺Script"
+    KingTeam = "LegendofNinja"
 elseif isGame(GameIDs.SpeedLegend) then
-    scriptVars.KingScript = "By LN"
-    scriptVars.Roblox = "霖溺Script"
-    scriptVars.KingTeam = "SpeedLegend"
+    KingScript = "By LN"
+    Roblox = "霖溺Script"
+    KingTeam = "SpeedLegend"
 elseif isGame(GameIDs.AttackingZombies) then
-    scriptVars.LNScript = "By LN"
-    scriptVars.Roblox = "新年快乐"
-    scriptVars.LNTeam = "进击的僵尸"
+    LNScript = "By LN"
+    Roblox = "新年快乐"
+    LNTeam = "进击的僵尸"
 elseif isGame(GameIDs.HaikyuuLegends) then
-    scriptVars.KingScript = "By LN"
-    scriptVars.Roblox = "霖溺"
-    scriptVars.KingTeam = "Haikyuu Legends"
+    KingScript = "By LN"
+    Roblox = "霖溺"
+    KingTeam = "Haikyuu Legends"
 elseif isGame(GameIDs.FishTraining) then
-    scriptVars.LNScript = "By LN"
-    scriptVars.Roblox = "鱼的训练"
-    scriptVars.LNTeam = "免费"
+    LNScript = "By LN"
+    Roblox = "鱼的训练"
+    LNTeam = "免费"
 elseif isGame(GameIDs.Forsaken) then
-    scriptVars.LnScript = "By Ln"
-    scriptVars.Roblox = "免费"
-    scriptVars.LNTeam = "被遗弃服务器"
+    LnScript = "By Ln"
+    Roblox = "免费"
+    LNTeam = "被遗弃服务器"
 elseif isGame(GameIDs.AllTheWayWest) then
-    scriptVars.LnScript = "By Ln"
-    scriptVars.Roblox = "免费"
-    scriptVars.LNTeam = "一路向西"
+    LnScript = "By Ln"
+    Roblox = "免费"
+    LNTeam = "一路向西"
 elseif isGame(GameIDs.BattleWarrior) then
-    scriptVars.LnScript = "霖溺-战斗勇士"
+    LnScript = "霖溺-战斗勇士"
 elseif isGame(GameIDs.GunFFA) then
-    scriptVars.LnScript = "霖溺-枪战FFA"
+    LnScript = "霖溺-枪战FFA"
 elseif isGame(GameIDs.UltimateMiningTycoon) then
-    scriptVars.LinniScript = "终极采矿大亨"
-    scriptVars.Roblox = "霖溺"
+    LinniScript = "终极采矿大亨"
+    Roblox = "霖溺"
 elseif isGame(GameIDs.PlantingGarden) then
-    scriptVars.linniScript = "Linni"
-    scriptVars.Roblox = "种植花园"
-    scriptVars.LinniTeam = "挂机"
+    linniScript = "Linni"
+    Roblox = "种植花园"
+    LinniTeam = "挂机"
 elseif isGame(GameIDs.BladeBall) then
-    scriptVars.LnScript = "霖溺-刀刃球"
+    LnScript = "霖溺-刀刃球"
 elseif isGame(GameIDs.hideOrdie) then
-    scriptVars.LnScript = "霖溺-隐藏和死亡"
+    LnScript = "霖溺-隐藏和死亡"
 elseif isGame(GameIDs.Bladeandbuffoonery) then
-    scriptVars.LnScript = "霖溺-刀片和buffoonery"
+    LnScript = "霖溺-刀片和buffoonery"
 end
 
 if Games.GamesById[game.PlaceId] then
