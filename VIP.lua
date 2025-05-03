@@ -19,7 +19,9 @@ local GameIDs = {
     GunFFA = {12137249458}, -- 枪战FFA
     UltimateMiningTycoon = {18680867089}, -- 终极采矿大亨 
     PlantingGarden = {126884695634066} -- 种植花园
-     BladeBall = {13772394625, 4777817887, 15234596844, 15517169103, 16581637217, 15144787112} -- 刀刃球
+     BladeBall = {13772394625, 4777817887, 15234596844, 15517169103, 16581637217, 15144787112}, -- 刀刃球
+     hideOrdie = {18799085098}, -- 隐藏或死亡
+     Bladeandbuffoonery = {117701570624742} -- 刀片和buffoonery
 }
 
 local function isGame(gameList)
@@ -137,6 +139,14 @@ if isGame(GameIDs.BladeBall) then
 LnScript = "霖溺-刀刃球"
 end
 
+if isGame(GameIDs.hideOrdie) then
+LnScript = "霖溺-隐藏和死亡"
+end
+
+if isGame(GameIDs.Bladeandbuffoonery) then
+LnScript = "霖溺-刀片和buffoonery"
+end
+
 for PlaceID, Execute in pairs(Games) do
     if PlaceID == game.PlaceId then
         loadstring(game:HttpGet(Execute))()
@@ -217,4 +227,12 @@ end
 
 if isGame(GameIDs.BladeBall) then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-BladeBall.lua"))()
+end
+
+if isGame(GameIDs.hideOrdie) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-Hide%20and%20die.lua"))()
+end
+
+if isGame(GameIDs.Bladeandbuffoonery) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-%E5%88%80%E7%89%87%E5%92%8Cbuffoonery.lua"))()
 end
