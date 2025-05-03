@@ -18,7 +18,8 @@ local GameIDs = {
     BattleWarrior = {4282985734, 1390601379, 11979319180}, -- 战斗勇士 
     GunFFA = {12137249458}, -- 枪战FFA
     UltimateMiningTycoon = {18680867089}, -- 终极采矿大亨 
-    PlantingGarden = {126884695634066} -- 种植花园 
+    PlantingGarden = {126884695634066} -- 种植花园
+     BladeBall = {13772394625, 4777817887, 15234596844, 15517169103, 16581637217, 15144787112} -- 刀刃球
 }
 
 local function isGame(gameList)
@@ -35,7 +36,6 @@ if isGame(GameIDs.Ohio) then
     Roblox = "草拟吗"
     KingTeam = "King无敌" 
 end
-
 if isGame(GameIDs.Fish) then
     LnScript = "By LN"
     Roblox = "Fish"
@@ -133,10 +133,26 @@ if isGame(GameIDs.PlantingGarden) then
     LinniTeam = "挂机" 
 end
 
+if isGame(GameIDs.BladeBall) then
+LnScript = "霖溺-刀刃球"
+end
+
 for PlaceID, Execute in pairs(Games) do
     if PlaceID == game.PlaceId then
         loadstring(game:HttpGet(Execute))()
     end
+end
+
+if isGame(GameIDs.Ohio) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/OHIO%E9%80%86%E5%A4%A9.lua"))()
+end
+
+if isGame(GameIDs.Fish) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/FishScriptLn.lua"))()
+end
+
+if isGame(GameIDs.LegendOfPower) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LN%E5%8A%9B%E9%87%8F.lua"))()
 end
 
 if isGame(GameIDs.Planks) then
@@ -197,4 +213,8 @@ end
 
 if isGame(GameIDs.PlantingGarden) then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/%E7%A7%8D%E6%A4%8D%E8%8A%B1%E5%9B%AD.lua"))()
+end
+
+if isGame(GameIDs.BladeBall) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-BladeBall.lua"))()
 end
