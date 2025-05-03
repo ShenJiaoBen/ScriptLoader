@@ -1,22 +1,200 @@
-local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()
+local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()--不需要管，只不过也不能删
 
-if game.PlaceId == 7239319209 then  -- ohio
-KingScript = "By King" Roblox= "草拟吗"
-KingTeam= "King无敌" 
+local GameIDs = {
+    Ohio = {7239319209}, --俄亥俄州
+    Fish = {16732694052}, --鱼
+    LegendOfPower = {3623096087}, -- 力量传奇
+    Planks = {140636953470579}, -- [TRADING]Planks 
+    KillerAndSheriff = {12355337193}, -- 杀手与警长 
+    BattlefieldTycoon = {31490825}, -- 战地大亨 
+    ColonialSurvival = {14888386963, 5129563181, 14972061219},-- 殖民地生存
+    NinjaLegend = {3956818381}, -- 忍者传奇
+    SpeedLegend = {3101667897}, --极速传奇
+    AttackingZombies = {1240123653}, -- 进击的僵尸 
+    HaikyuuLegends = {73956553001240}, -- 棒球传奇
+    FishTraining = {116432016116625}, -- 鱼的训练 
+    Forsaken = {18687417158}, --  被遗弃 
+    AllTheWayWest = {2474168535}, -- 一路向西 
+    BattleWarrior = {4282985734, 1390601379, 11979319180}, -- 战斗勇士 
+    GunFFA = {12137249458}, -- 枪战FFA
+    UltimateMiningTycoon = {18680867089}, -- 终极采矿大亨 
+    PlantingGarden = {126884695634066} -- 种植花园 
+}
+
+local function isGame(gameList)
+    for _, id in ipairs(gameList) do
+        if game.PlaceId == id then
+            return true
+        end
+    end
+    return false
 end
 
-if game.PlaceId == 16732694052 then  -- fish
-LnScript = "By LN" Roblox= "Fish"
-LnTeam= "免费"
+if isGame(GameIDs.Ohio) then
+    KingScript = "By King"
+    Roblox = "草拟吗"
+    KingTeam = "King无敌" 
 end
 
-if game.PlaceId == 3623096087 then  -- 力量传奇
-KingScript = "By LN" Roblox= "霖溺Script"
-KingTeam= "LegendofPower" 
+if isGame(GameIDs.Fish) then
+    LnScript = "By LN"
+    Roblox = "Fish"
+    LnTeam = "免费"
+end
+
+if isGame(GameIDs.LegendOfPower) then
+    KingScript = "By LN"
+    Roblox = "霖溺Script"
+    KingTeam = "LegendofPower" 
+end
+
+if isGame(GameIDs.Planks) then
+    KingScript = "By King"
+    Roblox = "霖溺Script"
+    KingTeam = "霖溺Planks" 
+end
+
+if isGame(GameIDs.KillerAndSheriff) then
+    KingScript = "By King"
+    Roblox = "新飞月二飞春"
+    KingTeam = "霖溺杀手与警长" 
+end
+
+if isGame(GameIDs.BattlefieldTycoon) then
+    KingScript = "By King"
+    Roblox = "霖溺"
+    KingTeam = "战地大亨" 
+end
+
+if isGame(GameIDs.ColonialSurvival) then
+    LnScript = "By Ln"
+    LnTeam = "免费"
+    ServerName = "殖民地生存" 
+end
+
+if isGame(GameIDs.NinjaLegend) then
+    KingScript = "By LN"
+    Roblox = "霖溺Script"
+    KingTeam = "LegendofNinja" 
+end
+
+if isGame(GameIDs.SpeedLegend) then
+    KingScript = "By LN"
+    Roblox = "霖溺Script"
+    KingTeam = "SpeedLegend" 
+end
+
+if isGame(GameIDs.AttackingZombies) then
+    LNScript = "By LN"
+    Roblox = "新年快乐"
+    LNTeam = "进击的僵尸" 
+end
+
+if isGame(GameIDs.HaikyuuLegends) then
+    KingScript = "By LN"
+    Roblox = "霖溺"
+    KingTeam = "Haikyuu Legends" 
+end
+
+if isGame(GameIDs.FishTraining) then
+    LNScript = "By LN"
+    Roblox = "鱼的训练"
+    LNTeam = "免费" 
+end
+
+if isGame(GameIDs.Forsaken) then
+    LnScript = "By Ln"
+    Roblox = "免费"
+    LNTeam = "被遗弃服务器" 
+end
+
+if isGame(GameIDs.AllTheWayWest) then
+    LnScript = "By Ln"
+    Roblox = "免费"
+    LNTeam = "一路向西" 
+end
+
+if isGame(GameIDs.BattleWarrior) then
+    LnScript = "霖溺-战斗勇士"
+end
+
+if isGame(GameIDs.GunFFA) then
+    LnScript = "霖溺-枪战FFA"
+end
+
+if isGame(GameIDs.UltimateMiningTycoon) then
+    LinniScript = "终极采矿大亨"
+    Roblox = "霖溺" 
+end
+
+if isGame(GameIDs.PlantingGarden) then
+    linniScript = "Linni"
+    Roblox = "种植花园"
+    LinniTeam = "挂机" 
 end
 
 for PlaceID, Execute in pairs(Games) do
     if PlaceID == game.PlaceId then
         loadstring(game:HttpGet(Execute))()
     end
+end
+
+if isGame(GameIDs.Planks) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/Planks%EF%BC%88%E5%AD%90%E8%BF%BD%E5%92%8C%E8%87%AA%E7%9E%84%EF%BC%89%20.lua"))()
+end
+
+if isGame(GameIDs.KillerAndSheriff) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/%E6%9D%80%E6%89%8B%E4%B8%8E%E8%AD%A6%E9%95%BF%EF%BC%88%E7%9B%AE%E5%89%8D%E6%AD%A3%E5%9C%A8FIX%EF%BC%89.lua"))()
+end
+
+if isGame(GameIDs.BattlefieldTycoon) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/%E6%88%98%E5%9C%B0%E5%A4%A7%E4%BA%A8%5B%E5%85%A8%E9%83%A8%E7%A7%92%E6%9D%80%5D.lua"))()
+end
+
+if isGame(GameIDs.NinjaLegend) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LN%E5%BF%8D%E8%80%85.lua"))()
+end
+
+if isGame(GameIDs.ColonialSurvival) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Colonial%20Survival%5Bhub%5D.lua"))()
+end
+
+if isGame(GameIDs.SpeedLegend) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LN%E6%9E%81%E9%80%9F.lua"))()
+end
+
+if isGame(GameIDs.AttackingZombies) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/%E8%BF%9B%E5%87%BB%E7%9A%84%E5%83%B5%E5%B0%B8.lua"))()
+end
+
+if isGame(GameIDs.HaikyuuLegends) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Haikyuu%20Legends%20.lua"))()
+end
+
+if isGame(GameIDs.FishTraining) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/%E9%B1%BC%E7%9A%84%E8%AE%AD%E7%BB%83.lua"))()
+end
+
+if isGame(GameIDs.Forsaken) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Forsaken.lua"))()
+end
+
+if isGame(GameIDs.AllTheWayWest) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Allthewaywest.lua"))()
+end
+
+if isGame(GameIDs.BattleWarrior) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-BattleWarrior.lua"))()
+end
+
+if isGame(GameIDs.GunFFA) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-GunFFA.lua"))()
+end
+
+if isGame(GameIDs.UltimateMiningTycoon) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/%E9%9C%96%E6%BA%BA-%E7%BB%88%E6%9E%81%E9%87%87%E7%9F%BF%E5%A4%A7%E4%BA%A8.lua"))()
+end
+
+if isGame(GameIDs.PlantingGarden) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/%E7%A7%8D%E6%A4%8D%E8%8A%B1%E5%9B%AD.lua"))()
 end
