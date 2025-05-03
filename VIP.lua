@@ -5,16 +5,15 @@ KingScript = "By King" Roblox= "草拟吗"
 KingTeam= "King无敌" 
 end
 
-elseif game.PlaceId == 16732694052 then  -- fish
+if game.PlaceId == 16732694052 then  -- fish
 LnScript = "By LN" Roblox= "Fish"
 LnTeam= "免费"
 end
 
-elseif game.PlaceId == 3623096087 then  -- 力量传奇
+if game.PlaceId == 3623096087 then  -- 力量传奇
 KingScript = "By LN" Roblox= "霖溺Script"
 KingTeam= "LegendofPower" 
 end
-
 
 for PlaceID, Execute in pairs(Games) do
     if PlaceID == game.PlaceId then
