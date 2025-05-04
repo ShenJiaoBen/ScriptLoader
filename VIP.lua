@@ -4,7 +4,7 @@ local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJia
 
 local GameIDs = {
     Ohio = {7239319209}, --俄亥俄州
-    ElementalPowerTycoon = {10253248401}, -- 元素力量大亨 
+    ElementalPowerTycoon = {10253248401}, -- 元素力量大亨
     EnergyAssault = {6172932937}, -- 能量突击
     InfectiveSmile = {5985232436}, -- 感染的微笑
     TheRake = {2413927524}, -- The Rake重制版
@@ -28,7 +28,8 @@ local GameIDs = {
     BladeBall = {13772394625, 4777817887, 15234596844, 16581648071, 15517169103, 16581637217, 15144787112}, -- 刀刃球
     hideOrdie = {18799085098}, -- 隐藏或死亡
     Bladeandbuffoonery = {117701570624742}, -- 刀片和buffoonery
-    nicooonextbots = {10118559731, 12629753855, 12135007762}
+    nicooonextbots = {10118559731, 12629753855, 12135007762},
+    Evade = {9872472334}
 }
 
 local function isGame(gameList)
@@ -127,6 +128,8 @@ elseif isGame(GameIDs.Bladeandbuffoonery) then
     LnScript = "霖溺-刀片和buffoonery"
 elseif isGame(GameIDs.nicooonextbots) then
     LnScript = "霖溺-nico下一个机器人"
+elseif isGame(GameIDs.Evade) then
+    LnScript = "霖溺-Evade"
 
 end
 
@@ -184,7 +187,9 @@ elseif isGame(GameIDs.ElementalPowerTycoon) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-Hide%20and%20die.lua"))()
     elseif isGame(GameIDs.Bladeandbuffoonery) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-%E5%88%80%E7%89%87%E5%92%8Cbuffoonery.lua"))()
-elseif isGame(GameIDs.nicooonextbots) then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_nicooonextbots.lua"))()   
+    elseif isGame(GameIDs.nicooonextbots) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_nicooonextbots.lua"))()
+    elseif isGame(GameIDs.Evade) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_Evade.lua"))()
     end
 end
