@@ -108,5 +108,5 @@ local function fadeOut()
 end
 
 fadeIn()
-wait(1)
+wait(0.5)
 fadeOut()
