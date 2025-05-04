@@ -28,7 +28,7 @@ local GameIDs = {
     BladeBall = {13772394625, 4777817887, 15234596844, 16581648071, 15517169103, 16581637217, 15144787112}, -- 刀刃球
     hideOrdie = {18799085098}, -- 隐藏或死亡
     Bladeandbuffoonery = {117701570624742}, -- 刀片和buffoonery
-    nicooonextbots = {10118559731}
+    nicooonextbots = {10118559731 12629753855, 12135007762}
 }
 
 local function isGame(gameList)
