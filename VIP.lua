@@ -1,120 +1,13 @@
-local player = game.Players.LocalPlayer
-local gui = Instance.new("ScreenGui")
-gui.Name = "LoadingScreen"
-gui.ResetOnSpawn = false
-gui.IgnoreGuiInset = true
-gui.Parent = player:WaitForChild("PlayerGui")
-
-local blur = Instance.new("BlurEffect")
-blur.Size = 24
-blur.Parent = game:GetService("Lighting")
-
-local image = Instance.new("ImageLabel")
-image.Name = "Logo"
-image.AnchorPoint = Vector2.new(0.5, 0.5)
-image.Position = UDim2.new(0.5, 0, 0.5, 0) 
-image.Size = UDim2.new(0, 150, 0, 150)
-image.BackgroundTransparency = 1
-image.Image = "rbxassetid://17120415981"
-image.Parent = gui
-
-local uiCorner = Instance.new("UICorner")
-uiCorner.CornerRadius = UDim.new(1, 0) 
-uiCorner.Parent = image
-
-local welcomeText = Instance.new("TextLabel")
-welcomeText.Name = "WelcomeText"
-welcomeText.AnchorPoint = Vector2.new(0.5, 0.5)
-welcomeText.Position = UDim2.new(0.5, 0, 0.3, 0) 
-welcomeText.Size = UDim2.new(0, 400, 0, 50)
-welcomeText.BackgroundTransparency = 1
-welcomeText.Text = "欢迎使用霖溺脚本"
-welcomeText.TextColor3 = Color3.fromRGB(255, 255, 255)
-welcomeText.TextSize = 36
-welcomeText.Font = Enum.Font.SourceSansBold
-welcomeText.TextTransparency = 1  
-welcomeText.Parent = gui
-
-local playerName = Instance.new("TextLabel")
-playerName.Name = "PlayerName"
-playerName.AnchorPoint = Vector2.new(0.5, 0.5)
-playerName.Position = UDim2.new(0.5, 0, 0.7, 0) 
-playerName.Size = UDim2.new(0, 400, 0, 40)
-playerName.BackgroundTransparency = 1
-playerName.Text = "你好: " .. player.Name
-playerName.TextSize = 28
-playerName.Font = Enum.Font.SourceSans
-playerName.TextTransparency = 1  
-playerName.Parent = gui
-
-local function rainbowEffect()
-    local hue = 0
-    while true do
-        hue = (hue + 0.01) % 1
-        playerName.TextColor3 = Color3.fromHSV(hue, 1, 1)
-        wait(0.05)
-    end
-end
-coroutine.wrap(rainbowEffect)()
-
-local function fadeIn()
-    local fadeTime = 1.2 
-    local startTime = tick()
-    
-    while tick() - startTime < fadeTime do
-        local alpha = (tick() - startTime) / fadeTime
-        local easeAlpha = math.sin(alpha * math.pi/2) 
-        
-        image.Position = UDim2.new(0.5, 0, 0.5, 0)
-        welcomeText.Position = UDim2.new(0.5, 0, 0.3 + (0.05 * (1 - easeAlpha)), 0)
-        playerName.Position = UDim2.new(0.5, 0, 0.7 + (0.05 * (1 - easeAlpha)), 0)
-        
-        welcomeText.TextTransparency = 1 - easeAlpha
-        playerName.TextTransparency = 1 - easeAlpha
-        image.ImageTransparency = 1 - easeAlpha
-        
-        game:GetService("RunService").Heartbeat:Wait()
-    end
-    
-    welcomeText.TextTransparency = 0
-    playerName.TextTransparency = 0
-    image.ImageTransparency = 0
-end
-
-local function fadeOut()
-    local fadeTime = 1.2 
-    local startTime = tick()
-    
-    while tick() - startTime < fadeTime do
-        local alpha = (tick() - startTime) / fadeTime
-        local easeAlpha = 1 - math.cos(alpha * math.pi/2) 
-        image.Position = UDim2.new(0.5, 0, 0.5 + (0.3 * easeAlpha), 0)
-        welcomeText.Position = UDim2.new(0.5, 0, 0.3 + (0.3 * easeAlpha), 0)
-        playerName.Position = UDim2.new(0.5, 0, 0.7 + (0.3 * easeAlpha), 0)
-        
-        welcomeText.TextTransparency = easeAlpha
-        playerName.TextTransparency = easeAlpha
-        image.ImageTransparency = easeAlpha
-        
-        game:GetService("RunService").Heartbeat:Wait()
-    end
-    
-    welcomeText.TextTransparency = 1
-    playerName.TextTransparency = 1
-    image.ImageTransparency = 1
-    
-    blur:Destroy()
-    gui:Destroy()
-end
-
-fadeIn()
-wait(1)
-fadeOut()
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.lua"))()
+wait(0.1)
 local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()
 
 local GameIDs = {
     Ohio = {7239319209}, --俄亥俄州
+    ElementalPowerTycoon = {10253248401}, -- 元素力量大亨
+    EnergyAssault = {6172932937}, -- 能量突击
+    InfectiveSmile = {5985232436}, -- 感染的微笑
+    TheRake = {2413927524}, -- The Rake重制版
     Fish = {16732694052}, --鱼
     LegendOfPower = {3623096087}, -- 力量传奇
     Planks = {140636953470579}, -- [TRADING]Planks 
@@ -134,11 +27,7 @@ local GameIDs = {
     PlantingGarden = {126884695634066}, -- 种植花园
     BladeBall = {13772394625, 4777817887, 15234596844, 16581648071, 15517169103, 16581637217, 15144787112}, -- 刀刃球
     hideOrdie = {18799085098}, -- 隐藏或死亡
-    Bladeandbuffoonery = {117701570624742}, -- 刀片和buffoonery
-    ElementalPowerTycoon = {10253248401}, -- 元素力量大亨
-    EnergyAssault = {6172932937}, -- 能量突击
-    InfectiveSmile = {5985232436}, -- 感染的微笑
-    TheRake = {2413927524} -- The Rake重制版
+    Bladeandbuffoonery = {117701570624742} -- 刀片和buffoonery
 }
 
 local function isGame(gameList)
@@ -156,6 +45,16 @@ if isGame(GameIDs.Ohio) then
     KingScript = "By King"
     Roblox = "草拟吗"
     KingTeam = "King无敌"
+elseif isGame(GameIDs.ElementalPowerTycoon) then
+    LnScript = "霖溺-元素力量大亨"
+
+elseif isGame(GameIDs.EnergyAssault) then
+    LnScript = "霖溺-能量突击"
+
+elseif isGame(GameIDs.InfectiveSmile) then
+    LnScript = "霖溺-感染力微笑"
+elseif isGame(GameIDs.TheRake) then
+    LnScript = "霖溺-TheRake"
 elseif isGame(GameIDs.Fish) then
     LnScript = "By LN"
     Roblox = "Fish"
@@ -225,18 +124,7 @@ elseif isGame(GameIDs.hideOrdie) then
     LnScript = "霖溺-隐藏和死亡"
 elseif isGame(GameIDs.Bladeandbuffoonery) then
     LnScript = "霖溺-刀片和buffoonery"
-end
-elseif isGame(GameIDs.ElementalPowerTycoon) then
-    LnScript = "霖溺-元素力量大亨"
-end
-elseif isGame(GameIDs.EnergyAssault) then
-    LnScript = "霖溺-能量突击"
-end
-elseif isGame(GameIDs.InfectiveSmile) then
-    LnScript = "霖溺-感染力微笑"
-end
-elseif isGame(GameIDs.TheRake) then
-    LnScript = "霖溺-TheRake"
+    
 end
 
 if Games.GamesById[game.PlaceId] then
@@ -245,6 +133,14 @@ else
 
     if isGame(GameIDs.Ohio) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/OHIO%E9%80%86%E5%A4%A9.lua"))()
+elseif isGame(GameIDs.ElementalPowerTycoon) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_ElementalPowerTycoon.lua"))()
+    elseif isGame(GameIDs.EnergyAssault) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_EnergyAssault.lua"))()
+    elseif isGame(GameIDs.InfectiveSmile) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_InfectiveSmile.lua"))()
+    elseif isGame(GameIDs.TheRake) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_TheRake.lua"))()
     elseif isGame(GameIDs.Fish) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/FishScriptLn.lua"))()
     elseif isGame(GameIDs.LegendOfPower) then
@@ -285,13 +181,5 @@ else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-Hide%20and%20die.lua"))()
     elseif isGame(GameIDs.Bladeandbuffoonery) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-%E5%88%80%E7%89%87%E5%92%8Cbuffoonery.lua"))()
-    elseif isGame(GameIDs.ElementalPowerTycoon) then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_ElementalPowerTycoon.lua"))()
-    elseif isGame(GameIDs.EnergyAssault) then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_EnergyAssault.lua"))()
-    elseif isGame(GameIDs.InfectiveSmile) then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_InfectiveSmile.lua"))()
-    elseif isGame(GameIDs.TheRake) then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_TheRake.lua"))()
     end
 end
