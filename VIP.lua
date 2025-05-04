@@ -4,7 +4,7 @@ local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJia
 
 local GameIDs = {
     Ohio = {7239319209}, --俄亥俄州
-    ElementalPowerTycoon = {10253248401}, -- 元素力量大亨
+    ElementalPowerTycoon = {10253248401}, -- 元素力量大亨 
     EnergyAssault = {6172932937}, -- 能量突击
     InfectiveSmile = {5985232436}, -- 感染的微笑
     TheRake = {2413927524}, -- The Rake重制版
