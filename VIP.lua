@@ -108,7 +108,7 @@ local function fadeOut()
 end
 
 fadeIn()
-wait(3)
+wait(1)
 fadeOut()
 
 local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()
