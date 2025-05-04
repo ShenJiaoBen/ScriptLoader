@@ -134,7 +134,11 @@ local GameIDs = {
     PlantingGarden = {126884695634066}, -- 种植花园
     BladeBall = {13772394625, 4777817887, 15234596844, 16581648071, 15517169103, 16581637217, 15144787112}, -- 刀刃球
     hideOrdie = {18799085098}, -- 隐藏或死亡
-    Bladeandbuffoonery = {117701570624742} -- 刀片和buffoonery
+    Bladeandbuffoonery = {117701570624742}, -- 刀片和buffoonery
+    ElementalPowerTycoon = {10253248401}, -- 元素力量大亨
+    EnergyAssault = {6172932937}, -- 能量突击
+    InfectiveSmile = {5985232436}, -- 感染的微笑
+    TheRake = {2413927524} -- The Rake重制版
 }
 
 local function isGame(gameList)
@@ -222,6 +226,18 @@ elseif isGame(GameIDs.hideOrdie) then
 elseif isGame(GameIDs.Bladeandbuffoonery) then
     LnScript = "霖溺-刀片和buffoonery"
 end
+elseif isGame(GameIDs.ElementalPowerTycoon) then
+    LnScript = "霖溺-元素力量大亨"
+end
+elseif isGame(GameIDs.EnergyAssault) then
+    LnScript = "霖溺-能量突击"
+end
+elseif isGame(GameIDs.InfectiveSmile) then
+    LnScript = "霖溺-感染力微笑"
+end
+elseif isGame(GameIDs.TheRake) then
+    LnScript = "霖溺-TheRake"
+end
 
 if Games.GamesById[game.PlaceId] then
     loadstring(game:HttpGet(Games.GamesById[game.PlaceId].url))()
@@ -269,5 +285,13 @@ else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-Hide%20and%20die.lua"))()
     elseif isGame(GameIDs.Bladeandbuffoonery) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-%E5%88%80%E7%89%87%E5%92%8Cbuffoonery.lua"))()
+    elseif isGame(GameIDs.ElementalPowerTycoon) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_ElementalPowerTycoon.lua"))()
+    elseif isGame(GameIDs.EnergyAssault) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_EnergyAssault.lua"))()
+    elseif isGame(GameIDs.InfectiveSmile) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_InfectiveSmile.lua"))()
+    elseif isGame(GameIDs.TheRake) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_TheRake.lua"))()
     end
 end
