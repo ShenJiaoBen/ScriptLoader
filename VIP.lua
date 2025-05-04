@@ -126,7 +126,7 @@ elseif isGame(GameIDs.hideOrdie) then
 elseif isGame(GameIDs.Bladeandbuffoonery) then
     LnScript = "霖溺-刀片和buffoonery"
 elseif isGame(GameIDs.nicooonextbots) then
-    LnScript = "霖溺-nico的下一个机器人"
+    LnScript = "霖溺-nico下一个机器人"
 
 end
 
