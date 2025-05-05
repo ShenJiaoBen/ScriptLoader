@@ -28,7 +28,8 @@ local GameIDs = {
     hideOrdie = {18799085098}, -- 隐藏或死亡
     Bladeandbuffoonery = {117701570624742}, -- 刀片和buffoonery
     nicooonextbots = {10118559731, 12629753855, 12135007762},
-    Evade = {9872472334, 10662542523, 10324347967, 10324346056, 10530697691, 10808838353}
+    Evade = {9872472334, 10662542523, 10324347967, 10324346056, 10530697691, 10808838353},
+    PillarChase2 = {16560655288}
 }
 
 local function isGame(gameList)
@@ -129,6 +130,8 @@ elseif isGame(GameIDs.nicooonextbots) then
     LnScript = "霖溺-nico下一个机器人"
 elseif isGame(GameIDs.Evade) then
     LnScript = "霖溺-Evade"
+elseif isGame(GameIDs.PillarChase2) then
+    LnScript = "霖溺-柱子追逐2"
 
 end
 
@@ -190,5 +193,9 @@ else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_nicooonextbots.lua"))()
     elseif isGame(GameIDs.Evade) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_Evade.lua"))()
+    elseif isGame(GameIDs.PillarChase2) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_PillarChase2.lua"))()
+     
+     
     end
 end
