@@ -1,5 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.lua"))()
-wait(0.1)
+
 local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()
 
 local GameIDs = {
