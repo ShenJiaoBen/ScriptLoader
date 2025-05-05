@@ -27,9 +27,10 @@ local GameIDs = {
     BladeBall = {13772394625, 4777817887, 15234596844, 16581648071, 15517169103, 16581637217, 15144787112}, -- 刀刃球
     hideOrdie = {18799085098}, -- 隐藏或死亡
     Bladeandbuffoonery = {117701570624742}, -- 刀片和buffoonery
-    nicooonextbots = {10118559731, 12629753855, 12135007762},
-    Evade = {9872472334, 10662542523, 10324347967, 10324346056, 10530697691, 10808838353},
-    PillarChase2 = {16560655288}
+    nicooonextbots = {10118559731, 12629753855, 12135007762}, -- nico的下一个机器人
+    Evade = {9872472334, 10662542523, 10324347967, 10324346056, 10530697691, 10808838353}, -- Evade
+    PillarChase2 = {16560655288}, -- 柱子追逐2
+    MurderMystery2 = {893973440, 142823291}  -- 破坏者谜团2
 }
 
 local function isGame(gameList)
@@ -132,7 +133,8 @@ elseif isGame(GameIDs.Evade) then
     LnScript = "霖溺-Evade"
 elseif isGame(GameIDs.PillarChase2) then
     LnScript = "霖溺-柱子追逐2"
-
+elseif isGame(GameIDs.MurderMystery2) then
+    LnScript = "霖溺-破坏者谜团2"
 end
 
 if Games.GamesById[game.PlaceId] then
@@ -195,7 +197,7 @@ else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_Evade.lua"))()
     elseif isGame(GameIDs.PillarChase2) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_PillarChase2.lua"))()
-     
-     
+     elseif isGame(GameIDs.MurderMystery2) then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_MurderMystery2.lua"))()
     end
 end
