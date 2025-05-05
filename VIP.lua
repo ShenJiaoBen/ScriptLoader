@@ -1,5 +1,40 @@
-
 local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()
+
+local Blacklist = {
+    "loadstring",  
+    "00z7n", 
+    "print", 
+    "hook" 
+}
+
+local function checkBlacklist(player)
+    for _, name in ipairs(Blacklist) do
+        if player.Name:lower() == name:lower() then 
+            return true
+        end
+    end
+    return false
+end
+
+local function kickBlacklistedPlayers()
+    for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
+        if checkBlacklist(player) then
+            pcall(function() 
+                player:Kick("⚠️ 你已被列入黑名单")
+            end)
+        end
+    end
+end
+
+game:GetService("Players").PlayerAdded:Connect(function(player)
+    if checkBlacklist(player) then
+        pcall(function()
+            player:Kick("⚠️ 你已被列入黑名单")
+        end)
+    end
+end)
+
+kickBlacklistedPlayers()
 
 local GameIDs = {
     Ohio = {7239319209}, --俄亥俄州
@@ -42,18 +77,14 @@ local function isGame(gameList)
     return false
 end
 
-
-
 if isGame(GameIDs.Ohio) then
     KingScript = "By King"
     Roblox = "草拟吗"
     KingTeam = "King无敌"
 elseif isGame(GameIDs.ElementalPowerTycoon) then
     LnScript = "霖溺-元素力量大亨"
-
 elseif isGame(GameIDs.EnergyAssault) then
     LnScript = "霖溺-能量突击"
-
 elseif isGame(GameIDs.InfectiveSmile) then
     LnScript = "霖溺-感染力微笑"
 elseif isGame(GameIDs.TheRake) then
@@ -140,7 +171,6 @@ end
 if Games.GamesById[game.PlaceId] then
     loadstring(game:HttpGet(Games.GamesById[game.PlaceId].url))()
 else
-
     if isGame(GameIDs.Ohio) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/new_ohio.lua"))()
     elseif isGame(GameIDs.ElementalPowerTycoon) then
@@ -197,7 +227,7 @@ else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_Evade.lua"))()
     elseif isGame(GameIDs.PillarChase2) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_PillarChase2.lua"))()
-     elseif isGame(GameIDs.MurderMystery2) then
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_MurderMystery2.lua"))()
+    elseif isGame(GameIDs.MurderMystery2) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_MurderMystery2.lua"))()
     end
 end
