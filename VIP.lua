@@ -1,11 +1,3 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{
-    Title = "✨ 霖溺脚本加载成功 ✨", 
-    Text = "🦋 Linni Script [免费] 🦋",
-    Icon = "rbxassetid://103514147451766",  
-    Duration = 1,   
-    Button1 = "🌟 欢迎进群 🌟",
-    Button2 = "🎮 欢迎使用 🎮"
-})
 
 local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()
 
@@ -20,7 +12,7 @@ local GameIDs = {
     Planks = {140636953470579}, -- [TRADING]Planks 
     KillerAndSheriff = {12355337193}, -- 杀手与警长 
     BattlefieldTycoon = {31490825}, -- 战地大亨 
-    ColonialSurvival = {14888386963, 14972061219},-- 殖民地生存
+    ColonialSurvival = {14888386963, 17362847861},-- 殖民地生存
     NinjaLegend = {3956818381}, -- 忍者传奇
     SpeedLegend = {3101667897}, --极速传奇
     AttackingZombies = {1240123653}, -- 进击的僵尸 
@@ -36,7 +28,7 @@ local GameIDs = {
     hideOrdie = {18799085098}, -- 隐藏或死亡
     Bladeandbuffoonery = {117701570624742}, -- 刀片和buffoonery
     nicooonextbots = {10118559731, 12629753855, 12135007762},
-    Evade = {9872472334}
+
 }
 
 local function isGame(gameList)
@@ -135,8 +127,6 @@ elseif isGame(GameIDs.Bladeandbuffoonery) then
     LnScript = "霖溺-刀片和buffoonery"
 elseif isGame(GameIDs.nicooonextbots) then
     LnScript = "霖溺-nico下一个机器人"
-elseif isGame(GameIDs.Evade) then
-    LnScript = "霖溺-Evade"
 
 end
 
@@ -196,7 +186,6 @@ else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-%E5%88%80%E7%89%87%E5%92%8Cbuffoonery.lua"))()
     elseif isGame(GameIDs.nicooonextbots) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_nicooonextbots.lua"))()
-    elseif isGame(GameIDs.Evade) then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_Evade.lua"))()
+    
     end
 end
