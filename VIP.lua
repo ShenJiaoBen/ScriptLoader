@@ -138,8 +138,8 @@ if Games.GamesById[game.PlaceId] then
 else
 
     if isGame(GameIDs.Ohio) then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/OHIO%E9%80%86%E5%A4%A9.lua"))()
-elseif isGame(GameIDs.ElementalPowerTycoon) then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/new_ohio.lua"))()
+    elseif isGame(GameIDs.ElementalPowerTycoon) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_ElementalPowerTycoon.lua"))()
     elseif isGame(GameIDs.EnergyAssault) then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_EnergyAssault.lua"))()
