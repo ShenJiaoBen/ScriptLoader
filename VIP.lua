@@ -1,4 +1,11 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "霖溺脚本加载成功",Text = "Linni",Icon = "rbxassetid://",Duration = 1,Callback = bindable,Button1 = "欢迎进群",Button2 = "欢迎使用"})
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "✨ 霖溺脚本加载成功 ✨", 
+    Text = "🦋 Linni Script [免费] 🦋",
+    Icon = "rbxassetid://103514147451766",  
+    Duration = 1,   
+    Button1 = "🌟 欢迎进群 🌟",
+    Button2 = "🎮 欢迎使用 🎮"
+})
 
 local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()
 
