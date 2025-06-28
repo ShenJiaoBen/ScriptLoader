@@ -37,7 +37,8 @@ local GameIDs = {
     BreakIn2 = {13864667823, 13864661000, 14775231477}, -- Break In 2（故事）
     RopeBattle = {136195938137126}, -- Rope Battle
     UntitledDrillGame = {87700573492940}, --无标题钻机游戏
-    MergeBrainrot = {124387865885397} -- Merge Brainrot
+    MergeBrainrot = {124387865885397}, -- Merge Brainrot
+    ArsenalLinni = {286090429} -- 兵工厂
     
 }
 
@@ -62,6 +63,7 @@ local CreatorIDs = {
     Digthebackyard = {35630257}, -- 挖出后院
     JiuJiuNightsintheforest = {6042520}, -- 森林中的99夜
     AnimeRising = {34063840} -- 动漫崛起
+    
     
 }
 
@@ -200,8 +202,8 @@ local function setGameVariables(gameName)
     LnScript = "霖溺-无标题钻机游戏"
         elseif gameName == "MergeBrainrot" then
     LinniHubScript = "霖溺-MergeBrainrot"
-
-    
+    elseif gameName == "ArsenalLinni" then
+    LnScript = "霖溺-兵工厂"
     
     
     
@@ -253,8 +255,9 @@ local function setCreatorVariables(creatorName)
     LnScript = "霖溺-森林中的99夜"  
          elseif creatorName == "AnimeRising" then 
     LnScript = "霖溺-动漫崛起"
-     
-    
+        
+        
+        
         
         
     end
@@ -295,8 +298,8 @@ local function getGameScriptUrl(gameName)
         BreakIn2 = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniHubBreakIn2.lua",
         RopeBattle = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniHub_RopeBattle.lua",
         UntitledDrillGame = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniScriptHub_Untitled%20Drill%20Game.lua",
-        MergeBrainrot = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniScriptHub_Merge-Brainrot.lua"
-        
+        MergeBrainrot = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniScriptHub_Merge-Brainrot.lua",
+        ArsenalLinni = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/ArsenalLinni.lua"
         
         
         
@@ -333,13 +336,12 @@ local function getCreatorScriptUrl(creatorName)
 
 
 
-
         
     }
     return urls[creatorName]
 end
 
-local function detectAndLoad()
+local function LinniLoad()
 
     if Games.GamesById[game.PlaceId] then
         loadScript(Games.GamesById[game.PlaceId].url)
@@ -378,4 +380,4 @@ local function detectAndLoad()
 end
 
 
-detectAndLoad()
+LinniLoad()
