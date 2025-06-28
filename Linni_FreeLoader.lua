@@ -1,4 +1,7 @@
---霖溺开源上传，用于作弊者的学习
+--霖溺开源上传，用于作弊者的学习，这是一个作弊中心
+--请勿倒卖
+--一切只是为了提供Game作弊乐趣
+--请文明游戏
 local Games = loadstring(game:HttpGet("https://raw.githubusercontent.com/ShenJiaoBen/ScriptLoader/refs/heads/main/2.lua"))()
 
 local marketplaceService = game:GetService("MarketplaceService")
@@ -62,7 +65,8 @@ local CreatorIDs = {
     Lootify = {33799733}, -- 掠夺
     Digthebackyard = {35630257}, -- 挖出后院
     JiuJiuNightsintheforest = {6042520}, -- 森林中的99夜
-    AnimeRising = {34063840} -- 动漫崛起
+    AnimeRising = {34063840}, -- 动漫崛起
+    SurvivingOvernightInASupermarket = {35468177} -- 在超级超市过夜生存
     
     
 }
@@ -255,7 +259,8 @@ local function setCreatorVariables(creatorName)
     LnScript = "霖溺-森林中的99夜"  
          elseif creatorName == "AnimeRising" then 
     LnScript = "霖溺-动漫崛起"
-        
+elseif creatorName == "SurvivingOvernightInASupermarket" then
+LinniHubScript = "霖溺-在超级超市过夜生存"
         
         
         
@@ -329,8 +334,8 @@ local function getCreatorScriptUrl(creatorName)
         Lootify = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniScriptHub_Lootify.lua",
         Digthebackyard = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniTeamRoblox_DigTheBackyard.lua",
        JiuJiuNightsintheforest = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniTeam_99NightsInTheForest.lua",
-     AnimeRising = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/AnimeRisingLinniScriptHub.lua"
-
+     AnimeRising = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/AnimeRisingLinniScriptHub.lua",
+SurvivingOvernightInASupermarket = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/SurvivingOvernightInASupermarket.lua"
 
 
 
