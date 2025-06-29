@@ -119,7 +119,8 @@ local CreatorIDs = {
     Digthebackyard = {35630257}, -- 挖出后院
     JiuJiuNightsintheforest = {6042520}, -- 森林中的99夜
     AnimeRising = {34063840}, -- 动漫崛起
-    SurvivingOvernightInASupermarket = {35468177} -- 在超级超市过夜生存
+    SurvivingOvernightInASupermarket = {35468177}, -- 在超级超市过夜生存
+    DeadRail = {11867394} -- 死铁轨
     
     
 }
@@ -314,7 +315,12 @@ local function setCreatorVariables(creatorName)
     LnScript = "霖溺-动漫崛起"
 elseif creatorName == "SurvivingOvernightInASupermarket" then
 LinniHubScript = "霖溺-在超级超市过夜生存"
-        
+    elseif creatorName == "DeadRail" then
+author = "bai"
+team = "King and ha"
+
+
+
         
         
         
@@ -388,8 +394,8 @@ local function getCreatorScriptUrl(creatorName)
         Digthebackyard = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniTeamRoblox_DigTheBackyard.lua",
        JiuJiuNightsintheforest = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniTeam_99NightsInTheForest.lua",
      AnimeRising = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/AnimeRisingLinniScriptHub.lua",
-SurvivingOvernightInASupermarket = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/SurvivingOvernightInASupermarket.lua"
-
+SurvivingOvernightInASupermarket = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/SurvivingOvernightInASupermarket.lua",
+DeadRail = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/DeadRails.lua"
 
 
 
