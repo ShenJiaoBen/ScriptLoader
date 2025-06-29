@@ -94,7 +94,11 @@ local GameIDs = {
     RopeBattle = {136195938137126}, -- Rope Battle
     UntitledDrillGame = {87700573492940}, --无标题钻机游戏
     MergeBrainrot = {124387865885397}, -- Merge Brainrot
-    ArsenalLinni = {286090429} -- 兵工厂
+    ArsenalLinni = {286090429}, -- 兵工厂
+    EatTheWorld = {16480898254} -- 吃吃世界
+    
+    
+    
     
 }
 
@@ -262,8 +266,8 @@ local function setGameVariables(gameName)
     LinniHubScript = "霖溺-MergeBrainrot"
     elseif gameName == "ArsenalLinni" then
     LnScript = "霖溺-兵工厂"
-    
-    
+        elseif gameName == "EatTheWorld" then
+    LnScript = "霖溺-吃吃世界"
     
     
     
@@ -363,8 +367,8 @@ local function getGameScriptUrl(gameName)
         RopeBattle = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniHub_RopeBattle.lua",
         UntitledDrillGame = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniScriptHub_Untitled%20Drill%20Game.lua",
         MergeBrainrot = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniScriptHub_Merge-Brainrot.lua",
-        ArsenalLinni = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/ArsenalLinni.lua"
-        
+        ArsenalLinni = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/ArsenalLinni.lua",
+        EatTheWorld = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_EatTheWorld.lua"
         
         
     }
