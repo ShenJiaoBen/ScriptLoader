@@ -85,6 +85,7 @@ local GameIDs = {
 
 local CreatorIDs = {
     BladeBall = {12836673}, -- 刀刃球
+    fost = {33548380}, -- 被遗弃
     Evade = {693735}, --逃避
     AnimeSaga = {16819392}, -- AnimeSaga[动漫传奇]
     BloxFruits = {4372130}, -- BF水果
@@ -275,6 +276,8 @@ end
 local function setCreatorVariables(creatorName)
     if creatorName == "BladeBall" then
         LnScript = "霖溺-刀刃球"
+    elseif creatorName == "fost" then
+    LnScript = "霖溺-被遗弃"
     elseif creatorName == "BladeBall" then
         LnScript = "霖溺-Evade"
     elseif creatorName == "AnimeSaga" then
@@ -401,6 +404,7 @@ end
 local function getCreatorScriptUrl(creatorName)
     local urls = {
         BladeBall = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-BladeBall.lua",
+        fost = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/fort.lua",
         AnimeSaga = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_AnimeSaga.lua",
         BloxFruits = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_BloxFruits.lua",
         BlueLockRivals = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/LinniHub_BlueLockRivals.lua",
