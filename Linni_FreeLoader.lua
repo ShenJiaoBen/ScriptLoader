@@ -38,6 +38,7 @@ local cachedGameInfo = {}
  
 local GameIDs = {
     Ohio = {7239319209}, --俄亥俄州
+    piggy = {1516533665},
     ElementalPowerTycoon = {10253248401}, -- 元素力量大亨
     EnergyAssault = {6172932937}, -- 能量突击
     InfectiveSmile = {5985232436}, -- 感染的微笑
@@ -160,6 +161,8 @@ local function setGameVariables(gameName)
         KingScript = "By King"
         Roblox = "草拟吗"
         KingTeam = "King无敌"
+ elseif gameName == "piggy" then
+ LnScript = "霖溺-Piggy"
     elseif gameName == "ElementalPowerTycoon" then
         LnScript = "霖溺-元素力量大亨"
     elseif gameName == "EnergyAssault" then
@@ -348,6 +351,7 @@ end
 local function getGameScriptUrl(gameName)
     local urls = {
         Ohio = "https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/new_ohio.lua",
+        piggy = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/piggy.txt",
         ElementalPowerTycoon = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_ElementalPowerTycoon.lua",
         EnergyAssault = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_EnergyAssault.lua",
         InfectiveSmile = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_InfectiveSmile.lua",
