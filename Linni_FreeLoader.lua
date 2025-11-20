@@ -1,14 +1,5 @@
---免费加载器，开源
-print("████████╗░█████╗░██████╗░╚══██╔══╝██╔══██╗██╔══██╗░░░██║░░░██║░░██║██████╔╝░░░██║░░░██║░░██║██╔═══╝░░░░██║░░░╚█████╔╝██║░░░░░░░░╚═╝░░░░╚════╝░╚═╝░░░░░")
-print("该脚本由LinniHub团队创建，名为LinniHub脚本，希望您使用愉快。")
-print("LinniHub官方QQ群链接↓")
-print("霖溺QQ新主群：http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=viOjjgj19-TUiZlamhpxb6uvWwVNGoB7&authKey=ACDi9sCtIis%2F4P%2BtirP046uWaJ54%2F149eBnUvaAsMu%2BWZwSFoEQrzZC9UDGFwmp%2F&noverify=0&group_code=744830231")
-print("QQ群链接↑")
-print("ฅ●ω●ฅ")
-print("霖溺QQ新主群：http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=viOjjgj19-TUiZlamhpxb6uvWwVNGoB7&authKey=ACDi9sCtIis%2F4P%2BtirP046uWaJ54%2F149eBnUvaAsMu%2BWZwSFoEQrzZC9UDGFwmp%2F&noverify=0&group_code=744830231")
-print("████████╗░█████╗░██████╗░╚══██╔══╝██╔══██╗██╔══██╗░░░██║░░░██║░░██║██████╔╝░░░██║░░░██║░░██║██╔═══╝░░░░██║░░░╚█████╔╝██║░░░░░░░░╚═╝░░░░╚════╝░╚═╝░░░░░")
 
-local GroupID = 36012386--霖溺群组id
+local GroupID = 36012386
 local KickMessage = "请先加入霖溺群组!\n已自动为你复制群组名字请在剪贴板查看"
 
 local function CheckGroup()
@@ -39,6 +30,7 @@ local cachedGameInfo = {}
 local GameIDs = {
     Ohio = {7239319209}, --俄亥俄州
     piggy = {1516533665},
+    gofish = {106962503558742, 116605585218149}, --去钓鱼
     ElementalPowerTycoon = {10253248401}, -- 元素力量大亨
     EnergyAssault = {6172932937}, -- 能量突击
     InfectiveSmile = {5985232436}, -- 感染的微笑
@@ -163,6 +155,8 @@ local function setGameVariables(gameName)
         KingTeam = "King无敌"
  elseif gameName == "piggy" then
  LnScript = "霖溺-Piggy"
+  elseif gameName == "gofish" then
+  LnScript = "霖溺-去钓鱼"
     elseif gameName == "ElementalPowerTycoon" then
         LnScript = "霖溺-元素力量大亨"
     elseif gameName == "EnergyAssault" then
@@ -352,6 +346,7 @@ local function getGameScriptUrl(gameName)
     local urls = {
         Ohio = "https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/new_ohio.lua",
         piggy = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/piggy.txt",
+        gofish = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/GoFish.lua",
         ElementalPowerTycoon = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_ElementalPowerTycoon.lua",
         EnergyAssault = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_EnergyAssault.lua",
         InfectiveSmile = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_InfectiveSmile.lua",
