@@ -1,5 +1,5 @@
 
-local GroupID = 36012386
+local GroupID = 36012386--霖溺群组id
 local KickMessage = "请先加入霖溺群组!\n已自动为你复制群组名字请在剪贴板查看"
 
 local function CheckGroup()
@@ -78,6 +78,7 @@ local GameIDs = {
 
 local CreatorIDs = {
     BladeBall = {12836673}, -- 刀刃球
+    fpssg = {875557553}, --闪光
     fost = {33548380}, -- 被遗弃
     Evade = {693735}, --逃避
     AnimeSaga = {16819392}, -- AnimeSaga[动漫传奇]
@@ -273,6 +274,8 @@ end
 local function setCreatorVariables(creatorName)
     if creatorName == "BladeBall" then
         LnScript = "霖溺-刀刃球"
+        elseif creatorName == "fpssg" then
+        LnScript = "霖溺-闪光"
     elseif creatorName == "fost" then
     LnScript = "霖溺-被遗弃"
     elseif creatorName == "BladeBall" then
@@ -346,7 +349,7 @@ local function getGameScriptUrl(gameName)
     local urls = {
         Ohio = "https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/new_ohio.lua",
         piggy = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/piggy.txt",
-        gofish = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/GoFish.lua",
+        gofish = "",
         ElementalPowerTycoon = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_ElementalPowerTycoon.lua",
         EnergyAssault = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_EnergyAssault.lua",
         InfectiveSmile = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_InfectiveSmile.lua",
@@ -403,6 +406,7 @@ end
 local function getCreatorScriptUrl(creatorName)
     local urls = {
         BladeBall = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-BladeBall.lua",
+        fpssg = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/FPS闪光.txt",
         fost = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/fort.lua",
         AnimeSaga = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_AnimeSaga.lua",
         BloxFruits = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni_BloxFruits.lua",
