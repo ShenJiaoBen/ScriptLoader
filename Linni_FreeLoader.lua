@@ -94,18 +94,17 @@ local function SafeExecute(url, vars)
         end
     end
 
-    print("正在获取脚本: " .. url)
     local success, content = pcall(function()
         return game:HttpGet(url)
     end)
 
     if not success then
-        warn("HTTP请求失败，请检查网络或链接是否有效。")
+        warn("HTTP请求失败，请检查网络或链接是否有效")
         return
     end
 
     if string.find(content, "404: Not Found") or string.len(content) < 5 then
-        warn("错误: 脚本链接失效 (404) 或内容为空: " .. url)
+        warn("错误: 脚本链接失效 (404) 或内容为空")
         return
     end
 
