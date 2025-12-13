@@ -2,7 +2,7 @@
 local Config = {
     GroupID = 36012386,
     KickMessage = "请先加入霖溺Roblox社区!\n已自动为你复制社区名字请在剪贴板查看",
-    GroupInfo = "群组名字:Linni_Hub，霖溺QQ主群:http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=viOjjgj19-TUiZlamhpxb6uvWwVNGoB7&authKey=ACDi9sCtIis%2F4P%2BtirP046uWaJ54%2F149eBnUvaAsMu%2BWZwSFoEQrzZC9UDGFwmp%2F&noverify=0&group_code=744830231"
+    GroupInfo = "群组名字:Linni_Hub"
 }
 local ScriptDatabase = {
     { name = "Ohio", ids = {7239319209}, url = "https://raw.githubusercontent.com/ShenJiaoBen/ShenJiaoBen/refs/heads/main/new_ohio.lua", vars = {["KingScript"]="By King", ["Roblox"]="草拟吗", ["KingTeam"]="King无敌"} },
