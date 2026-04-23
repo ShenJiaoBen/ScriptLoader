@@ -1,0 +1,487 @@
+{
+  "auto_collect": [
+    "bond",
+    "rifle_ammo",
+    "shotgun_shells",
+    "revolver_ammo"
+  ],
+  "auto_sack": [
+    "bond",
+    "rifle_ammo",
+    "shotgun_shells",
+    "revolver_ammo"
+  ],
+  "items": {
+    "valuables": [
+      "strange_mask",
+      "gold_nugget",
+      "gold_bar",
+      "gold_statue",
+      "gold_painting",
+      "gold_cup",
+      "gold_plate",
+      "gold_pocket_watch",
+      "silver_nugget",
+      "silver_bar",
+      "silver_statue",
+      "silver_painting",
+      "silver_cup",
+      "silver_plate",
+      "silver_pocket_watch",
+      "stone_statue",
+      "money_bag"
+    ],
+    "entities": [
+      "brain_jar"
+    ],
+    "weapons": [
+      "jade_sword",
+      "vampire_knife",
+      "elephant_rifle",
+      "crucifix",
+      "holy_water",
+      "rifle",
+      "bolt_action_rifle",
+      "navy_revolver",
+      "sawed_off_shotgun",
+      "shotgun",
+      "cavalry_sword",
+      "tomahawk",
+      "revolver",
+      "mauser",
+      "blunderbuss",
+      "bottle_rocket_launcher",
+      "crossbow",
+      "dynamite",
+      "firework_gun",
+      "flintlock",
+      "holy_hand_grenade",
+      "molotov",
+      "ray_pistol",
+      "ray_rifle",
+      "revolver_rifle",
+      "skeleton_grenade",
+      "spear",
+      "sword",
+      "thompson",
+      "ballista",
+      "tesla_cannon"
+    ],
+    "armor": [
+      "armor_chestplate",
+      "armor_helmet",
+      "armor_pauldron_left",
+      "armor_pauldron_right",
+      "mining_helmet"
+    ],
+    "junk": [
+      "barrel",
+      "chair",
+      "rope",
+      "wheel",
+      "book",
+      "banjo",
+      "teapot",
+      "vase_1",
+      "vase_2",
+      "glass_bottle",
+      "wood_painting",
+      "coal",
+      "sheet_metal",
+      "ladder",
+      "crate",
+      "camera",
+      "campfire",
+      "torch",
+      "lantern",
+      "acid_barrel",
+      "acid_mine",
+      "poster_wanted",
+      "rock"
+    ],
+    "special": [
+      "snake_oil",
+      "bandage",
+      "bond",
+      "jade_tablet_1",
+      "jade_tablet_2",
+      "jade_tablet_3",
+      "jade_tablet_4",
+      "horse_cart",
+      "easter_egg_medium",
+      "easter_egg_small",
+      "electrocutioner",
+      "present",
+      "supply_depot_key",
+      "telegraph_halloween",
+      "strange_machine"
+    ],
+    "bank_combo": [
+      "bank_combo_1",
+      "bank_combo_2",
+      "bank_combo_3",
+      "bank_combo_4",
+      "bank_combo_5",
+      "bank_combo_note"
+    ]
+  },
+  "esp_mobs": [
+    {
+      "category": "Zombies",
+      "mobs": [
+        {
+          "name": "Sheriff Zombie",
+          "model": "Model_ZombieSheriff",
+          "paths": [
+            "Towns.SmallTownTemplate.ZombiePart.Zombies",
+            "Towns.MediumTownTemplate.ZombiePart.Zombies",
+            "Towns.LargeTownTemplate.ZombiePart.Zombies",
+            "RandomBuildings.Doctor.StandaloneZombiePart.Zombies",
+            "RandomBuildings.DoctorDestroyed.StandaloneZombiePart.Zombies",
+            "RandomBuildings.House.StandaloneZombiePart.Zombies",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Miner Zombie",
+          "model": "Model_ZombieMiner",
+          "paths": [
+            "Towns.MediumTownTemplate.ZombiePart.Zombies",
+            "Towns.LargeTownTemplate.ZombiePart.Zombies",
+            "RandomBuildings.Doctor.StandaloneZombiePart.Zombies",
+            "RandomBuildings.DoctorDestroyed.StandaloneZombiePart.Zombies",
+            "RandomBuildings.House.StandaloneZombiePart.Zombies",
+            "Towns.SmallTownTemplate.ZombiePart.Zombies",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Runner Zombie",
+          "model": "Model_Runner",
+          "paths": [
+            "Towns.SmallTownTemplate.ZombiePart.Zombies",
+            "Towns.MediumTownTemplate.ZombiePart.Zombies",
+            "Towns.LargeTownTemplate.ZombiePart.Zombies",
+            "NightEnemies",
+            "RandomBuildings.Doctor.StandaloneZombiePart.Zombies",
+            "RandomBuildings.DoctorDestroyed.StandaloneZombiePart.Zombies",
+            "RandomBuildings.House.StandaloneZombiePart.Zombies",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Walker Zombie",
+          "model": "Model_Walker",
+          "paths": [
+            "RandomBuildings.Doctor.StandaloneZombiePart.Zombies",
+            "RandomBuildings.DoctorDestroyed.StandaloneZombiePart.Zombies",
+            "RandomBuildings.House.StandaloneZombiePart.Zombies",
+            "Towns.LargeTownTemplate.ZombiePart.Zombies",
+            "Towns.MediumTownTemplate.ZombiePart.Zombies",
+            "Towns.SmallTownTemplate.ZombiePart.Zombies",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Armored Zombie",
+          "model": "Model_ArmoredZombie",
+          "paths": [
+            "Towns.SmallTownTemplate.ZombiePart.Zombies",
+            "RandomBuildings.DoctorDestroyed.StandaloneZombiePart.Zombies",
+            "RandomBuildings.Doctor.StandaloneZombiePart.Zombies",
+            "RandomBuildings.House.StandaloneZombiePart.Zombies",
+            "Towns.LargeTownTemplate.ZombiePart.Zombies",
+            "Towns.MediumTownTemplate.ZombiePart.Zombies",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Acid Skeleton",
+          "model": "Model_AcidSkeleton",
+          "paths": [
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Zombie Revolver Officer",
+          "model": "Model_ZombieRevolverOfficer",
+          "paths": [
+            "FortConstitution.Enemies.Model_ZombieRevolverOfficer",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Zombie Sword Officer",
+          "model": "Model_ZombieSwordOfficer",
+          "paths": [
+            "FortConstitution.Enemies.Model_ZombieSwordOfficer",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Night Creatures",
+      "mobs": [
+        {
+          "name": "Vampire",
+          "model": "Model_Vampire",
+          "paths": [
+            "RuntimeEntities",
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "NightEnemies",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Werewolf",
+          "model": "Model_Werewolf",
+          "paths": [
+            "RuntimeEntities",
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "NightEnemies",
+            "RuntimeItems"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "NPCs",
+      "mobs": [
+        {
+          "name": "Banker",
+          "model": "Model_Banker",
+          "paths": [
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Captain Prescott",
+          "model": "Model_CaptainPrescott",
+          "paths": [
+            "FortConstitution.Enemies.Model_CaptainPrescott",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Zombie Revolver Officer",
+          "model": "Model_ZombieRevolverOfficer",
+          "paths": [
+            "FortConstitution.Enemies.Model_ZombieRevolverOfficer",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Zombie Sword Officer",
+          "model": "Model_ZombieSwordOfficer",
+          "paths": [
+            "FortConstitution.Enemies.Model_ZombieSwordOfficer",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Outlaws",
+      "mobs": [
+        {
+          "name": "Revolver Outlaw",
+          "model": "Model_RevolverOutlaw",
+          "paths": [
+            "RuntimeItems",
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "RuntimeEntities"
+          ]
+        },
+        {
+          "name": "Rifle Outlaw",
+          "model": "Model_RifleOutlaw",
+          "paths": [
+            "RuntimeItems",
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "RuntimeEntities"
+          ]
+        },
+        {
+          "name": "Shotgun Outlaw",
+          "model": "Model_ShotgunOutlaw",
+          "paths": [
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Animals",
+      "mobs": [
+        {
+          "name": "Wolf",
+          "model": "Model_Wolf",
+          "paths": [
+            "RuntimeEntities",
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Bear",
+          "model": "Model_Bear",
+          "paths": [
+            "RuntimeEntities"
+          ]
+        },
+        {
+          "name": "Horse",
+          "model": "Model_Horse",
+          "paths": [
+            "",
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "Baseplates.Baseplate30.CenterBaseplate.Animal",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Death Horse",
+          "model": "Model_DeathHorse",
+          "paths": [
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "War Horse",
+          "model": "Model_WarHorse",
+          "paths": [
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Famine Horse",
+          "model": "Model_FamineHorse",
+          "paths": [
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Pestilence Horse",
+          "model": "Model_PestilenceHorse",
+          "paths": [
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Reindeer",
+          "model": "Model_Reindeer",
+          "paths": [
+            "Baseplates.Baseplate16.CenterBaseplate.Animals"
+          ]
+        },
+        {
+          "name": "Unicorn",
+          "model": "Model_Unicorn",
+          "paths": [
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "Baseplates.Baseplate24.CenterBaseplate.Animals",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Knights",
+      "mobs": [
+        {
+          "name": "Covenant Knight",
+          "model": "Model_CovenantKnight",
+          "paths": [
+            "RuntimeEntities",
+            "StillwaterPrison.Enemies",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Covenant Archer",
+          "model": "Model_CovenantArcher",
+          "paths": [
+            "StillwaterPrison.Enemies",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Giants",
+      "mobs": [
+        {
+          "name": "Goliath",
+          "model": "Model_Goliath",
+          "paths": [
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Aliens",
+      "mobs": [
+        {
+          "name": "Melee Alien",
+          "model": "Model_MeleeAlien",
+          "paths": [
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        },
+        {
+          "name": "Raygun Alien",
+          "model": "Model_RaygunAlien",
+          "paths": [
+            "Baseplates.Baseplate16.CenterBaseplate.Animals",
+            "RuntimeEntities",
+            "RuntimeItems"
+          ]
+        }
+      ]
+    }
+  ],
+  "contributors": [
+    { "name": "霖溺", "role": "主作者" },
+    { "name": "伊散", "role": "宣传" },
+    { "name": "神仇", "role": "护航" }
+  ],
+  "content_creators": [
+    { "name": "伊散", "role": "剪辑师" },
+    { "name": "孤岛", "role": "宣传" }
+  ]
+}
